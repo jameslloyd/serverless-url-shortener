@@ -46,7 +46,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, NextId
     var result = new List<Result>();
     var url = input.Input;
     bool tagMediums = input.TagMediums.HasValue ? input.TagMediums.Value : false;
-    bool tagSource = (input.TagSource.HasValue ? input.TagSource.Value : true) || tagMediums;
+    bool tagSource = (input.TagSource.HasValue ? input.TagSource.Value : false) || tagMediums;
 
     log.Info($"URL: {url} Tag Source? {tagSource} Tag Mediums? {tagMediums}");
     

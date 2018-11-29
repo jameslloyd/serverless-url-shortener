@@ -25,7 +25,7 @@ public static string Encode(int i)
             return string.Join(string.Empty, s.Reverse());
 }
 
-public static string[] UTM_MEDIUMS=new [] {"twitter", "facebook", "linkedin", "googleplus"};
+public static string[] UTM_MEDIUMS=new [] {};
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, NextId keyTable, CloudTable tableOut, TraceWriter log)
 {
